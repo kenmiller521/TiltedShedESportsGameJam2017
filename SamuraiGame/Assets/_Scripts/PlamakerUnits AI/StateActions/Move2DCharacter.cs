@@ -10,21 +10,25 @@ public class Move2DCharacter : FsmStateAction
    // [CheckForComponent(typeof(Animator))]
    // [Tooltip("The target. An Animator component is required")]
     public FsmOwnerDefault gameObject;
+    public FsmFloat _moveX = 1f;
     private PlatformerCharacter2D _character;
 
     public override void Reset()
     {
         gameObject = null;
         _character = null;
+        _moveX.Value = 0f;
     }
 
     public override void OnEnter()
     {
+        Debug.Log("Entered State");
         // get the animator component
         var go = Fsm.GetOwnerDefaultTarget(gameObject);
 
         if (go == null)
         {
+            Debug.Log("Cant find Character");
             Finish();
             return;
         }
@@ -33,15 +37,36 @@ public class Move2DCharacter : FsmStateAction
 
         //MoveCharacter();
     }
+    public override void OnUpdate()
+    {
+        Debug.Log("Update State");
+        base.OnUpdate();
 
+    }
     public override void OnFixedUpdate()
     {
+        Debug.Log("FixedUpdate State");
         MoveCharacter();
     }
 
     private void MoveCharacter()
     {
         //To Do: Call Move
+        if(_character)
+        {
+            Debug.Log("Moving Character");
+            _character.Move(_moveX.Value, false, false);
+        }
+        else
+        {
+            Debug.Log("Cant find Character");
+        }
+    }
+    public override void OnExit()
+    {
+        Debug.Log("Exiting State");
+        base.OnExit();
+
     }
 
 }

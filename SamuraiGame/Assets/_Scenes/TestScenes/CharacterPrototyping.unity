@@ -125,6 +125,7 @@ GameObject:
   - component: {fileID: 174910144}
   - component: {fileID: 174910145}
   - component: {fileID: 174910146}
+  - component: {fileID: 174910147}
   m_Layer: 0
   m_Name: CharacterPrototype
   m_TagString: Untagged
@@ -154,7 +155,7 @@ Rigidbody2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 174910141}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -266,15 +267,25 @@ MonoBehaviour:
         linkConstraint: 0
         colorIndex: 0
       actionData:
-        actionNames: []
-        customNames: []
-        actionEnabled: 
-        actionIsOpen: 
-        actionStartIndex: 
-        actionHashCodes: 
+        actionNames:
+        - Move2DCharacter
+        customNames:
+        - 
+        actionEnabled: 01
+        actionIsOpen: 01
+        actionStartIndex: 00000000
+        actionHashCodes: e8ea3902
         unityObjectParams: []
         fsmGameObjectParams: []
-        fsmOwnerDefaultParams: []
+        fsmOwnerDefaultParams:
+        - ownerOption: 0
+          gameObject:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
         animationCurveParams: []
         functionCallParams: []
         fsmTemplateControlParams: []
@@ -286,7 +297,13 @@ MonoBehaviour:
         fsmVarParams: []
         fsmArrayParams: []
         fsmEnumParams: []
-        fsmFloatParams: []
+        fsmFloatParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 1
         fsmIntParams: []
         fsmBoolParams: []
         fsmVector2Params: []
@@ -300,10 +317,12 @@ MonoBehaviour:
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 
-        paramName: []
-        paramDataPos: 
-        paramByteDataSize: 
+        paramDataType: 140000000f000000
+        paramName:
+        - gameObject
+        - _moveX
+        paramDataPos: 0000000000000000
+        paramByteDataSize: 0000000000000000
     - name: Attack
       description: 
       colorIndex: 0
@@ -525,6 +544,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d3bccb8c54b93c44acbc8d1a7e9e90e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SubscribableObject: {fileID: 0}
+  _playMaker: {fileID: 0}
+  _onDamageEventName: TAKE_DAMAGE
+  _onDeathEventName: DIE
+--- !u!114 &174910147
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 174910141}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d08f91df3bd212f429df17f53ce2f364, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MaxSpeed: 10
+  m_JumpForce: 400
+  m_CrouchSpeed: 0.36
+  m_AirControl: 0
+  m_WhatIsGround:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_GroundCheck: {fileID: 1125715263}
+  m_CeilingCheck: {fileID: 1429618123}
+  m_Anim: {fileID: 1686443843}
 --- !u!1001 &385906584
 Prefab:
   m_ObjectHideFlags: 0
@@ -621,6 +665,14 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.8, y: 2}
   m_EdgeRadius: 0
+--- !u!4 &1125715263 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 400000, guid: 87a2357765801c34292d6718d8b4d770, type: 2}
+  m_PrefabInternal: {fileID: 1498505404}
+--- !u!4 &1429618123 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 400004, guid: 87a2357765801c34292d6718d8b4d770, type: 2}
+  m_PrefabInternal: {fileID: 1498505404}
 --- !u!1001 &1498505404
 Prefab:
   m_ObjectHideFlags: 0
@@ -671,6 +723,11 @@ Prefab:
 --- !u!4 &1498505405 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400002, guid: 87a2357765801c34292d6718d8b4d770, type: 2}
+  m_PrefabInternal: {fileID: 1498505404}
+--- !u!95 &1686443843 stripped
+Animator:
+  m_PrefabParentObject: {fileID: 9500000, guid: 87a2357765801c34292d6718d8b4d770,
+    type: 2}
   m_PrefabInternal: {fileID: 1498505404}
 --- !u!1 &1940147042
 GameObject:
