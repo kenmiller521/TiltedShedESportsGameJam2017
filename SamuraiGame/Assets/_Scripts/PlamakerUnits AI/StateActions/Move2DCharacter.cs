@@ -13,6 +13,11 @@ public class Move2DCharacter : FsmStateAction
     public FsmFloat _moveX = 1f;
     private PlatformerCharacter2D _character;
 
+    public override void Awake()
+    {
+        base.Awake();
+        Fsm.HandleFixedUpdate = true;
+    }
     public override void Reset()
     {
         gameObject = null;
@@ -22,7 +27,7 @@ public class Move2DCharacter : FsmStateAction
 
     public override void OnEnter()
     {
-        Debug.Log("Entered State");
+        //Debug.Log("Entered State");
         // get the animator component
         var go = Fsm.GetOwnerDefaultTarget(gameObject);
 
@@ -37,15 +42,9 @@ public class Move2DCharacter : FsmStateAction
 
         //MoveCharacter();
     }
-    public override void OnUpdate()
-    {
-        Debug.Log("Update State");
-        base.OnUpdate();
-
-    }
     public override void OnFixedUpdate()
     {
-        Debug.Log("FixedUpdate State");
+        //Debug.Log("FixedUpdate State");
         MoveCharacter();
     }
 
@@ -54,19 +53,9 @@ public class Move2DCharacter : FsmStateAction
         //To Do: Call Move
         if(_character)
         {
-            Debug.Log("Moving Character");
+            //Debug.Log("Moving Character");
             _character.Move(_moveX.Value, false, false);
         }
-        else
-        {
-            Debug.Log("Cant find Character");
-        }
-    }
-    public override void OnExit()
-    {
-        Debug.Log("Exiting State");
-        base.OnExit();
-
     }
 
 }
