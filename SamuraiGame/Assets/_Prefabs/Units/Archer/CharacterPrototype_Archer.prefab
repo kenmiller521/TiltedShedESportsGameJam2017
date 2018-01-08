@@ -542,7 +542,7 @@ MonoBehaviour:
       - fsmEvent:
           name: DO_ATTACK
           isSystemEvent: 0
-          isGlobal: 0
+          isGlobal: 1
         toState: Attack
         linkStyle: 0
         linkConstraint: 0
@@ -744,7 +744,7 @@ MonoBehaviour:
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: 1
+          value: 1.5
         - useVariable: 1
           name: 
           tooltip: 
@@ -918,7 +918,7 @@ MonoBehaviour:
       isGlobal: 0
     - name: DO_ATTACK
       isSystemEvent: 0
-      isGlobal: 0
+      isGlobal: 1
     globalTransitions:
     - fsmEvent:
         name: DIE
@@ -1070,8 +1070,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Faction: 1
-  maxHealth: 100
-  currentHealth: 100
+  maxHealth: 75
+  currentHealth: 75
   _debug: 0
   _invulnTime: 0.25
   _isInvulnerable: 0
