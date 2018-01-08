@@ -42,7 +42,7 @@ public class RaycastUnitChecker : MonoBehaviour
         }
         else
         {
-            Debug.Log("LineCast Empty");
+            //Debug.Log("LineCast Empty");
         }
         Debug.DrawLine(this.transform.position, this.transform.position + this.transform.right * checkDist, Color.red);
         resultGameObject = null;
