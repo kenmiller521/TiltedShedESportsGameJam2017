@@ -12,7 +12,7 @@ public class GoldManager : MonoBehaviour
     public int OwnerNumber = 0;
 
     public int archerCost;
-    public int calvaryCost;
+    public int cavalryCost;
     public int infantryCost;
     public int passiveGoldIncrement;
     public float passiveGoldTimer;

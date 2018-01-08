@@ -12,17 +12,17 @@ public class UnitButtonInteractable : MonoBehaviour
     //player insance of GoldManager
     public GoldManager goldManager;
 
-	// Use this for initialization
-	void Start ()
+    // Use this for initialization
+    void Start()
     {
-		
-	}
-	
-	// Update is called once per frame
-	void Update ()
+
+    }
+
+    // Update is called once per frame
+    void Update()
     {
         //Calvary Button
-        if (goldManager.balance >= goldManager.calvaryCost)
+        if (goldManager.balance >= goldManager.cavalryCost)
             calvaryButton.interactable = true;
 
         else
