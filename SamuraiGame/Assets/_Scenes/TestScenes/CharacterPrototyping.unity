@@ -763,6 +763,7 @@ MonoBehaviour:
   cavalry: {fileID: 0}
   cavalryBuildTime: 1
   spawnPoint: {fileID: 1033966388}
+  ownerNumber: 0
   SpawnArcherEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -778,6 +779,10 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+  buildIcons: {fileID: 0}
+  archerBuildImage: {fileID: 0}
+  infantryBuildImage: {fileID: 0}
+  cavalryBuildImage: {fileID: 0}
 --- !u!114 &364820732
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1014,7 +1019,7 @@ MonoBehaviour:
   archerCost: 0
   cavalryCost: 0
   infantryCost: 0
-  passiveGoldIncrement: 1
+  passiveGoldIncrement: 10
   passiveGoldTimer: 0.1
   balance: 0
 --- !u!4 &508256899
@@ -1165,6 +1170,7 @@ MonoBehaviour:
   cavalry: {fileID: 0}
   cavalryBuildTime: 1
   spawnPoint: {fileID: 1033966388}
+  ownerNumber: 0
   SpawnArcherEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -1180,6 +1186,10 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+  buildIcons: {fileID: 0}
+  archerBuildImage: {fileID: 0}
+  infantryBuildImage: {fileID: 0}
+  cavalryBuildImage: {fileID: 0}
 --- !u!222 &548115457
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2642,6 +2652,7 @@ MonoBehaviour:
   cavalry: {fileID: 0}
   cavalryBuildTime: 1
   spawnPoint: {fileID: 497225726}
+  ownerNumber: 0
   SpawnArcherEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -2657,6 +2668,10 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+  buildIcons: {fileID: 0}
+  archerBuildImage: {fileID: 0}
+  infantryBuildImage: {fileID: 0}
+  cavalryBuildImage: {fileID: 0}
 --- !u!114 &1506057785
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2829,6 +2844,7 @@ MonoBehaviour:
   cavalry: {fileID: 0}
   cavalryBuildTime: 1
   spawnPoint: {fileID: 1033966388}
+  ownerNumber: 0
   SpawnArcherEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -2844,6 +2860,10 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+  buildIcons: {fileID: 0}
+  archerBuildImage: {fileID: 0}
+  infantryBuildImage: {fileID: 0}
+  cavalryBuildImage: {fileID: 0}
 --- !u!222 &1545023862
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3138,7 +3158,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1940147042}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: 30.69, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -3169,6 +3189,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2136467286}
   - component: {fileID: 2136467285}
+  - component: {fileID: 2136467288}
+  - component: {fileID: 2136467287}
   m_Layer: 0
   m_Name: GoldManager_Enemy
   m_TagString: Untagged
@@ -3191,8 +3213,8 @@ MonoBehaviour:
   archerCost: 0
   cavalryCost: 0
   infantryCost: 0
-  passiveGoldIncrement: 1
-  passiveGoldTimer: 0
+  passiveGoldIncrement: 10
+  passiveGoldTimer: 0.1
   balance: 0
 --- !u!4 &2136467286
 Transform:
@@ -3207,6 +3229,60 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2136467287
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2136467284}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80e061f2e4cc4f745959c5aabe2a6399, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  archer: {fileID: 1442066375181620, guid: 818ce2dd5a29382499215c29f4b44dfe, type: 2}
+  archerBuildTime: 2
+  infantry: {fileID: 1442066375181620, guid: 818ce2dd5a29382499215c29f4b44dfe, type: 2}
+  infantryBuildTime: 1
+  cavalry: {fileID: 1442066375181620, guid: 818ce2dd5a29382499215c29f4b44dfe, type: 2}
+  cavalryBuildTime: 1
+  spawnPoint: {fileID: 497225726}
+  ownerNumber: 0
+  SpawnArcherEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  SpawnInfantryEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  SpawnCavalryEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  buildIcons: {fileID: 0}
+  archerBuildImage: {fileID: 0}
+  infantryBuildImage: {fileID: 0}
+  cavalryBuildImage: {fileID: 0}
+--- !u!114 &2136467288
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2136467284}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2ec2775590a3b747b85a50e7995511e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _goldManager: {fileID: 2136467285}
+  _unitSpawn: {fileID: 2136467287}
+  InfantryCost: 100
+  ArcherCost: 150
+  CalveryCost: 200
 --- !u!1 &2139043527
 GameObject:
   m_ObjectHideFlags: 0
