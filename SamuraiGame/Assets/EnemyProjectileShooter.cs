@@ -8,6 +8,7 @@ public class EnemyProjectileShooter : MonoBehaviour
     [SerializeField] private Vector2 _shootVector;
     [SerializeField] private float _shootForce;
     public Collider2D collider;
+    bool timeToShoot;
 
     private void Update()
     {
@@ -30,18 +31,19 @@ public class EnemyProjectileShooter : MonoBehaviour
         var unit = collision.attachedRigidbody.GetComponent<Unit>();
         if (unit)
         {
-            if (unit.OwnerNumber != myOwner)
+            timeToShoot = true;
+            if (unit.OwnerNumber != 1)
             {
-
+                ShootProjectile();
+                StartCoroutine(ShootDelay());
             }
         }
-        ShootProjectile();
         StartCoroutine(ShootDelay());
 
     }
     IEnumerator ShootDelay()
     {
-        //booolean to set true if it can shoot
+        timeToShoot = false;
         yield return new WaitForSeconds(1);
     }
 }
