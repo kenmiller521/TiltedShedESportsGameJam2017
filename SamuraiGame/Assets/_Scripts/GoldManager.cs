@@ -31,6 +31,9 @@ public class GoldManager : MonoBehaviour
     private void Start()
     {
         balance = 0;
+        infantryCost = 100;
+        archerCost = 150;
+        cavalryCost = 200;
         _goldTimer = passiveGoldTimer;
     }
 
