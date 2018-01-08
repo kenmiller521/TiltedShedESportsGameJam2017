@@ -23,8 +23,10 @@ public class RaycastUnitChecker : MonoBehaviour
         if (hits.Length > 0)
         {
             //Debug.DrawLine(this.transform.position, this.transform.position + this.transform.right * checkDist, Color.red);
+
             foreach (var h in hits)
             {
+                if (h.collider.isTrigger) continue;
                 var go = (h.collider.attachedRigidbody) ? h.collider.attachedRigidbody.gameObject : h.collider.gameObject;
                 Unit unit = go.GetComponent<Unit>();
                 if (unit)
