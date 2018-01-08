@@ -20,6 +20,6 @@ public class EnemyCastleDied : SubscriberBase<HealthManager>
     private void DoOnDeath()
     {
         Debug.Log("You Win");
-        if (!WinScreen) WinScreen.SetActive(true);
+        WinScreen.SetActive(true);
     }
 }
