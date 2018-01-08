@@ -9,6 +9,8 @@ using UnityEngine;
 
 public class GoldManager : MonoBehaviour
 {
+    public int OwnerNumber = 0;
+
     public int archerCost;
     public int calvaryCost;
     public int infantryCost;
@@ -18,18 +20,24 @@ public class GoldManager : MonoBehaviour
 
     private float _goldTimer;
 
-    public static GoldManager[] ManagerInstances;
+    public static GoldManager[] ManagerInstances = new GoldManager[2];
+
+    private void Awake()
+    {
+        ManagerInstances[OwnerNumber] = this;
+    }
 
     // Use this for initialization
-    void Start()
+    private void Start()
     {
         balance = 0;
         _goldTimer = passiveGoldTimer;
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
+        if (passiveGoldTimer <= 0f) return;
         _goldTimer -= Time.deltaTime;
 
         if (_goldTimer <= 0)
@@ -40,13 +48,13 @@ public class GoldManager : MonoBehaviour
     }
 
     //Add gold for passive increments and kill Rewards
-    void AddGold(int amount)
+    public void AddGold(int amount)
     {
         balance += amount;
     }
 
     //Deduct gold for unit spawns if sufficient funds
-    void DeductGold(int amount)
+    public void DeductGold(int amount)
     {
         if (amount <= balance)
             balance -= amount;
@@ -56,6 +64,14 @@ public class GoldManager : MonoBehaviour
 
         }
 
+    }
+    public static int GetOtherInstanceIndex(int currentInstanceIndex)
+    {
+        return (currentInstanceIndex == 0) ? 1 : 0;
+    }
+    public GoldManager GetOtherInstance()
+    {
+        return ManagerInstances[GetOtherInstanceIndex(OwnerNumber)];
     }
 
 }
