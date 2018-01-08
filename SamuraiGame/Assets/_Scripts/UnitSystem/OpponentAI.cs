@@ -23,7 +23,10 @@ public class OpponentAI : MonoBehaviour
 	
 	void Update ()
     {
-		
+		if(CheckIfCanAffordChoice(choiceQueue.Peek()))
+        {
+
+        }
 	}
 
     private void MakeChoice()
