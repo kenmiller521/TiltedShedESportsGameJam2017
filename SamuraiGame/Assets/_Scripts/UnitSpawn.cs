@@ -39,6 +39,7 @@ public class UnitSpawn : MonoBehaviour
 
     public void SpawnInfantry()
     {
+        GoldManager.ManagerInstances[0].DeductGold(GoldManager.ManagerInstances[0].infantryCost);
         StartCoroutine(SpawnInfantryIEnum());
     }
 
@@ -50,6 +51,7 @@ public class UnitSpawn : MonoBehaviour
 
     public void SpawnCalvary()
     {
+        GoldManager.ManagerInstances[0].DeductGold(GoldManager.ManagerInstances[0].calvaryCost);
         StartCoroutine(SpawnCalvaryIEnum());
     }
 
