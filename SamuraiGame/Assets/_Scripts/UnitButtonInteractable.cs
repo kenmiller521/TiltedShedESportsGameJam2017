@@ -12,10 +12,9 @@ public class UnitButtonInteractable : MonoBehaviour
     //player insance of GoldManager
     public GoldManager goldManager;
 
-    // Use this for initialization
     void Start()
     {
-
+        if (!goldManager) goldManager = GoldManager.ManagerInstances[0];
     }
 
     // Update is called once per frame

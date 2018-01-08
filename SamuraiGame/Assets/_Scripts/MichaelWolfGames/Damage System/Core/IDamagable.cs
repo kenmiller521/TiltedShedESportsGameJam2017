@@ -13,6 +13,7 @@ namespace MichaelWolfGames.DamageSystem
     public interface IDamagable
     {
         event Damage.DamageEventHandler OnTakeDamage;
+        Damage.Faction GetFaction();
 
         void ApplyDamage(object sender, Damage.DamageEventArgs e);
         void ApplyDamage(object sender, float damage, Vector3 hitPoint);

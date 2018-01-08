@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using MichaelWolfGames;
 using MichaelWolfGames.DamageSystem;
+
 public class AddGoldOnDeath : SubscriberBase<HealthManager>
 {
     [SerializeField] private Unit _unit;

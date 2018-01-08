@@ -28,5 +28,10 @@ namespace MichaelWolfGames.DamageSystem
         {
             ApplyDamage(this, new Damage.DamageEventArgs(damage, this.transform.position));
         }
+
+        public virtual Damage.Faction GetFaction()
+        {
+            return Faction;
+        }
     }
 }

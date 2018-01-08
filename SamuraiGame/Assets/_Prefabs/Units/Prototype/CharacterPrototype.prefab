@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4907485510570902}
   - component: {fileID: 114435576871417304}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RaycastChecker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -53,7 +53,7 @@ GameObject:
   - component: {fileID: 4231434932515708}
   - component: {fileID: 212192512578350324}
   - component: {fileID: 95045290169514770}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: CharacterRobotBoy
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -68,7 +68,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4420101677044174}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GroundCheck
   m_TagString: Untagged
   m_Icon: {fileID: -2065832391, guid: 0000000000000000d000000000000000, type: 0}
@@ -83,7 +83,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4608101686964132}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: CeilingCheck
   m_TagString: Untagged
   m_Icon: {fileID: -2065832391, guid: 0000000000000000d000000000000000, type: 0}
@@ -105,7 +105,8 @@ GameObject:
   - component: {fileID: 114853587637067692}
   - component: {fileID: 114480174224893220}
   - component: {fileID: 114859574865393470}
-  m_Layer: 0
+  - component: {fileID: 114124849037612076}
+  m_Layer: 8
   m_Name: CharacterPrototype
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -123,7 +124,8 @@ GameObject:
   - component: {fileID: 212031552761540696}
   - component: {fileID: 61638736490118214}
   - component: {fileID: 50514634469255748}
-  m_Layer: 2
+  - component: {fileID: 114294552980696636}
+  m_Layer: 8
   m_Name: Attack_HitBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -220,13 +222,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1101804694371826}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.84, z: 0}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0.8399999, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4810889460022260}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!50 &50248860775911980
 Rigidbody2D:
   serializedVersion: 4
@@ -254,7 +256,7 @@ Rigidbody2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1774197865641456}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -334,6 +336,18 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114124849037612076
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1753704000467094}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c482306038dedb489299e2c337accdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SubscribableObject: {fileID: 0}
 --- !u!114 &114179431170209780
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -351,6 +365,22 @@ MonoBehaviour:
   _debug: 0
   _invulnTime: 0.25
   _isInvulnerable: 0
+--- !u!114 &114294552980696636
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1774197865641456}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7634227c816927a4bacc6a12ab57cb73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultDamageValue: 25
+  faction: 1
+  damageType: 0
+  _canDealDamage: 1
+  DealDamageOncePerActivation: 1
 --- !u!114 &114435576871417304
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -492,7 +522,7 @@ MonoBehaviour:
         - useVariable: 1
           name: DistToEnemy
           tooltip: 
-          showInInspector: 0
+          showInInspector: 1
           networkSync: 0
           value: 0
         - useVariable: 0
@@ -603,7 +633,7 @@ MonoBehaviour:
         - useVariable: 1
           name: MoveX
           tooltip: 
-          showInInspector: 0
+          showInInspector: 1
           networkSync: 0
           value: 1
         - useVariable: 0
@@ -615,13 +645,13 @@ MonoBehaviour:
         - useVariable: 1
           name: DistToEnemy
           tooltip: 
-          showInInspector: 0
+          showInInspector: 1
           networkSync: 0
           value: 0
         - useVariable: 1
           name: DistToEnemy
           tooltip: 
-          showInInspector: 0
+          showInInspector: 1
           networkSync: 0
           value: 0
         - useVariable: 0
@@ -695,14 +725,16 @@ MonoBehaviour:
         - HutongGames.PlayMaker.Actions.Wait
         - HutongGames.PlayMaker.Actions.AnimatorPlay
         - Move2DCharacter
+        - HutongGames.PlayMaker.Actions.SetFloatValue
         customNames:
         - 
         - 
         - 
-        actionEnabled: 010101
-        actionIsOpen: 010101
-        actionStartIndex: 000000000300000008000000
-        actionHashCodes: 48c01101c34b4105e8ea3902
+        - 
+        actionEnabled: 01010101
+        actionIsOpen: 01010101
+        actionStartIndex: 0000000003000000080000000a000000
+        actionHashCodes: 48c01101c34b4105e8ea39029845b305
         unityObjectParams: []
         fsmGameObjectParams: []
         fsmOwnerDefaultParams:
@@ -758,6 +790,18 @@ MonoBehaviour:
           showInInspector: 0
           networkSync: 0
           value: 0
+        - useVariable: 1
+          name: DistToEnemy
+          tooltip: 
+          showInInspector: 1
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 9999
         fsmIntParams:
         - useVariable: 0
           name: 
@@ -773,12 +817,12 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams:
         - FINISHED
-        byteData: 0000
+        byteData: 000000
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 0f00000017000000010000001400000012000000100000000f00000001000000140000000f000000
+        paramDataType: 0f00000017000000010000001400000012000000100000000f00000001000000140000000f0000000f0000000f00000001000000
         paramName:
         - time
         - finishEvent
@@ -790,8 +834,11 @@ MonoBehaviour:
         - everyFrame
         - gameObject
         - _moveX
-        paramDataPos: 00000000000000000000000000000000000000000000000001000000010000000100000002000000
-        paramByteDataSize: 00000000000000000100000000000000000000000000000000000000010000000000000000000000
+        - floatVariable
+        - floatValue
+        - everyFrame
+        paramDataPos: 00000000000000000000000000000000000000000000000001000000010000000100000002000000030000000400000002000000
+        paramByteDataSize: 00000000000000000100000000000000000000000000000000000000010000000000000000000000000000000000000001000000
     - name: Dead
       description: 
       colorIndex: 0
@@ -919,13 +966,13 @@ MonoBehaviour:
       - useVariable: 1
         name: DistToEnemy
         tooltip: 
-        showInInspector: 0
+        showInInspector: 1
         networkSync: 0
         value: 0
       - useVariable: 1
         name: MoveX
         tooltip: 
-        showInInspector: 0
+        showInInspector: 1
         networkSync: 0
         value: 1
       intVariables:
@@ -1004,7 +1051,7 @@ MonoBehaviour:
     handleJointBreak: 0
     handleJointBreak2D: 0
     handleOnGUI: 0
-    handleFixedUpdate: 0
+    handleFixedUpdate: 1
     handleLateUpdate: 0
     handleApplicationEvents: 0
     handleLegacyNetworking: 0
