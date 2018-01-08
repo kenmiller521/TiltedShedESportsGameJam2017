@@ -36,8 +36,12 @@ public class UnitSpawn : MonoBehaviour
         if (GoldManager.ManagerInstances[ownerNumber].balance >= GoldManager.ManagerInstances[ownerNumber].archerCost)
         {
             StartCoroutine(SpawnArcherIEnum());
-            //Instantiate(archerBuildImage, buildIcons.transform);
-            //LayoutRebuilder.MarkLayoutForRebuild(buildIcons.transform as RectTransform);
+
+            if(archerBuildImage)
+            {
+                Instantiate(archerBuildImage, buildIcons.transform);
+                LayoutRebuilder.MarkLayoutForRebuild(buildIcons.transform as RectTransform);
+            }        
         }
     }
 
@@ -53,8 +57,12 @@ public class UnitSpawn : MonoBehaviour
         if (GoldManager.ManagerInstances[ownerNumber].balance >= GoldManager.ManagerInstances[ownerNumber].infantryCost)
         {
             StartCoroutine(SpawnInfantryIEnum());
-            //Instantiate(infantryBuildImage, buildIcons.transform);
-            //LayoutRebuilder.MarkLayoutForRebuild(buildIcons.transform as RectTransform);
+
+            if(infantryBuildImage)
+            {
+                Instantiate(infantryBuildImage, buildIcons.transform);
+                LayoutRebuilder.MarkLayoutForRebuild(buildIcons.transform as RectTransform);
+            }           
         }
     }
 
@@ -68,10 +76,14 @@ public class UnitSpawn : MonoBehaviour
     public void SpawnCavalry()
     {
         if (GoldManager.ManagerInstances[ownerNumber].balance >= GoldManager.ManagerInstances[ownerNumber].cavalryCost)
-        {
-            //Instantiate(cavalryBuildImage, buildIcons.transform);
-            //LayoutRebuilder.MarkLayoutForRebuild(buildIcons.transform as RectTransform);
+        {         
             StartCoroutine(SpawnCavalryIEnum());
+
+            if(cavalryBuildImage)
+            {
+                Instantiate(cavalryBuildImage, buildIcons.transform);
+                LayoutRebuilder.MarkLayoutForRebuild(buildIcons.transform as RectTransform);
+            }
         }           
     }
 

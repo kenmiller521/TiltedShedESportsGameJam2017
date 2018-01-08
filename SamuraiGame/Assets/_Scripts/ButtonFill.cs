@@ -20,8 +20,6 @@ public class ButtonFill : MonoBehaviour
     {
         _timer += Time.deltaTime;
         buildIcon.fillAmount = _timer / buildTime;
-
-        if (_timer >= buildTime)
-            Destroy(gameObject);
     }
+
 }
