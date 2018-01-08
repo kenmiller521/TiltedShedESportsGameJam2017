@@ -26,7 +26,7 @@ GameObject:
   - component: {fileID: 114431819365356556}
   - component: {fileID: 114095380542583254}
   m_Layer: 8
-  m_Name: Projectile_Fire
+  m_Name: Projectile_Fire 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -161,7 +161,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defaultDamageValue: 25
-  faction: 1
+  faction: 2
   damageType: 0
   _canDealDamage: 1
   DealDamageOncePerActivation: 1
