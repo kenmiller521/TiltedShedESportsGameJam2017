@@ -31,5 +31,11 @@ namespace MichaelWolfGames.DamageSystem
             Vector3 point = transform.position;// ClosestPointOnBounds(transform.position);
             return new Damage.DamageEventArgs(DamageValue, point, damageType);
         }
+
+        private void OnEnable()
+        {
+            if(DealDamageOncePerActivation)
+                CanDealDamage = true;
+        }
     }
 }
