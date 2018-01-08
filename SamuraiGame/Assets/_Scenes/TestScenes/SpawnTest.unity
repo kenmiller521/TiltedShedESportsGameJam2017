@@ -782,6 +782,7 @@ MonoBehaviour:
   cavalry: {fileID: 608652422}
   cavalryBuildTime: 3
   spawnPoint: {fileID: 1033966388}
+  ownerNumber: 0
   SpawnArcherEvent:
     m_PersistentCalls:
       m_Calls:
@@ -993,7 +994,7 @@ MonoBehaviour:
   archerCost: 2
   cavalryCost: 0
   infantryCost: 1
-  passiveGoldIncrement: 1
+  passiveGoldIncrement: 100
   passiveGoldTimer: 1
   balance: 0
 --- !u!1 &608652422
@@ -1418,7 +1419,7 @@ MonoBehaviour:
     m_Top: 0
     m_Bottom: 0
   m_ChildAlignment: 0
-  m_Spacing: 40
+  m_Spacing: 20
   m_ChildForceExpandWidth: 0
   m_ChildForceExpandHeight: 0
   m_ChildControlWidth: 0
