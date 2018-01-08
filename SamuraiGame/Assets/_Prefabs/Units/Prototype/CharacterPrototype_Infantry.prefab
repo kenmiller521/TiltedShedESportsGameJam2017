@@ -139,7 +139,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1642822966285806}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.09, y: -0.93, z: 0}
+  m_LocalPosition: {x: 2.5, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4831666707470896}
@@ -155,7 +155,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1231531991946122}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 1.08, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4360145642191576}
@@ -220,7 +220,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1949731744760082}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.3, y: 1.08, z: 0}
   m_LocalScale: {x: 0.17, y: 0.17, z: 0.17}
   m_Children:
   - {fileID: 4578228744135680}
@@ -559,7 +559,7 @@ MonoBehaviour:
       - fsmEvent:
           name: DO_ATTACK
           isSystemEvent: 0
-          isGlobal: 0
+          isGlobal: 1
         toState: Attack
         linkStyle: 0
         linkConstraint: 0
@@ -935,7 +935,7 @@ MonoBehaviour:
       isGlobal: 0
     - name: DO_ATTACK
       isSystemEvent: 0
-      isGlobal: 0
+      isGlobal: 1
     globalTransitions:
     - fsmEvent:
         name: DIE
