@@ -996,9 +996,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e1aec60d34801d45ac7511350fbae57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MasterSlider: {fileID: 0}
-  SoundEffectsSlider: {fileID: 0}
-  MusicSlider: {fileID: 0}
+  MasterSlider: {fileID: 1502826151}
+  SoundEffectsSlider: {fileID: 1372486076}
+  MusicSlider: {fileID: 1180425948}
 --- !u!1 &843158679
 GameObject:
   m_ObjectHideFlags: 0
@@ -1756,7 +1756,18 @@ MonoBehaviour:
   m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 788109479}
+        m_MethodName: ChangeMasterVolume
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Slider+SliderEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!1 &1516785589

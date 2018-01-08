@@ -21,4 +21,23 @@ public class OptionsMenuController : MonoBehaviour {
     {
         gameObject.SetActive(false);
     }
+
+    public void ChangeMasterVolume()
+    {
+        string masterBusString = "Bus:/";
+        FMOD.Studio.Bus masterBus;
+
+        masterBus = FMODUnity.RuntimeManager.GetBus(masterBusString);
+        masterBus.setVolume(MasterSlider.value);
+        //masterBus.setFaderLevel(float);
+        //masterBus.getFaderLevel(out float);
+    }
+    public void ChangeSoundEffectsVolume()
+    {
+        string masterBusString = "Bus:/";
+        FMOD.Studio.Bus masterBus;
+
+        masterBus = FMODUnity.RuntimeManager.GetBus(masterBusString);
+        masterBus.setVolume(MasterSlider.value);
+    }
 }
