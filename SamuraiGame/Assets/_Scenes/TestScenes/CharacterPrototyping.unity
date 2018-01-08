@@ -2152,7 +2152,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _projectilePrefab: {fileID: 1219551973175742, guid: 077f0d73adef3934db9052a55b4a897e,
     type: 2}
-  _spawnTransform: {fileID: 0}
   _shootVector: {x: 1, y: 1}
   _shootForce: 8
 --- !u!4 &1238070566
@@ -3372,3 +3371,49 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &2140500029
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4360145642191576, guid: f20b911b791bf054e81a7a5c58255a79, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4360145642191576, guid: f20b911b791bf054e81a7a5c58255a79, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4360145642191576, guid: f20b911b791bf054e81a7a5c58255a79, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4360145642191576, guid: f20b911b791bf054e81a7a5c58255a79, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4360145642191576, guid: f20b911b791bf054e81a7a5c58255a79, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4360145642191576, guid: f20b911b791bf054e81a7a5c58255a79, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4360145642191576, guid: f20b911b791bf054e81a7a5c58255a79, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4360145642191576, guid: f20b911b791bf054e81a7a5c58255a79, type: 2}
+      propertyPath: m_RootOrder
+      value: 21
+      objectReference: {fileID: 0}
+    - target: {fileID: 1642822966285806, guid: f20b911b791bf054e81a7a5c58255a79, type: 2}
+      propertyPath: m_Name
+      value: YoKai_Infantry (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: f20b911b791bf054e81a7a5c58255a79, type: 2}
+  m_IsPrefabParent: 0

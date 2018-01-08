@@ -78,7 +78,7 @@ GameObject:
   - component: {fileID: 114807224494981790}
   - component: {fileID: 114892740846996314}
   m_Layer: 8
-  m_Name: CharacterPrototype_Infantry
+  m_Name: YoKai_Infantry
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -363,7 +363,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4405c16d705f3a48b1e04dda48daacb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Faction: 1
+  Faction: 2
   maxHealth: 100
   currentHealth: 100
   _debug: 0
@@ -958,14 +958,14 @@ MonoBehaviour:
         tooltip: 
         showInInspector: 1
         networkSync: 0
-        value: 1
+        value: -1
       intVariables:
       - useVariable: 1
         name: Owner
         tooltip: 
         showInInspector: 1
         networkSync: 0
-        value: 0
+        value: 1
       boolVariables: []
       stringVariables: []
       vector2Variables: []
@@ -1035,7 +1035,7 @@ MonoBehaviour:
     handleJointBreak: 0
     handleJointBreak2D: 0
     handleOnGUI: 0
-    handleFixedUpdate: 1
+    handleFixedUpdate: 0
     handleLateUpdate: 0
     handleApplicationEvents: 0
     handleLegacyNetworking: 0
@@ -1055,7 +1055,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defaultDamageValue: 25
-  faction: 1
+  faction: 2
   damageType: 0
   _canDealDamage: 1
   DealDamageOncePerActivation: 1
@@ -1070,7 +1070,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fa8b7f17ec31ee45b377e35570068cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  OwnerNumber: 0
+  OwnerNumber: 1
 --- !u!212 &212565897472432158
 SpriteRenderer:
   m_ObjectHideFlags: 1
