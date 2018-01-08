@@ -292,10 +292,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 19
       objectReference: {fileID: 0}
-    - target: {fileID: 1930100176493012, guid: 775ccc7a589dbf74fbb4f3937b1a8d92, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 775ccc7a589dbf74fbb4f3937b1a8d92, type: 2}
   m_IsPrefabParent: 0
@@ -2156,6 +2152,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _projectilePrefab: {fileID: 1219551973175742, guid: 077f0d73adef3934db9052a55b4a897e,
     type: 2}
+  _spawnTransform: {fileID: 0}
   _shootVector: {x: 1, y: 1}
   _shootForce: 8
 --- !u!4 &1238070566
@@ -3031,7 +3028,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1442066375181620, guid: 818ce2dd5a29382499215c29f4b44dfe, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 818ce2dd5a29382499215c29f4b44dfe, type: 2}

@@ -11,6 +11,21 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 1930100176493012}
   m_IsPrefabParent: 1
+--- !u!1 &1035194535123336
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4788929804667740}
+  m_Layer: 8
+  m_Name: ShootPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1231991193767746
 GameObject:
   m_ObjectHideFlags: 1
@@ -146,6 +161,7 @@ Transform:
   - {fileID: 4839900088218188}
   - {fileID: 4597244629277522}
   - {fileID: 4749516731164926}
+  - {fileID: 4788929804667740}
   m_Father: {fileID: 4246404574572458}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -203,6 +219,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4068986977215704}
   m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4788929804667740
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1035194535123336}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 5.19, y: -0.33, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4068986977215704}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4839900088218188
 Transform:
@@ -376,6 +405,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _projectilePrefab: {fileID: 1219551973175742, guid: 077f0d73adef3934db9052a55b4a897e,
     type: 2}
+  _spawnTransform: {fileID: 4788929804667740}
   _shootVector: {x: 1, y: 0.6}
   _shootForce: 8
 --- !u!114 &114456387343230802
