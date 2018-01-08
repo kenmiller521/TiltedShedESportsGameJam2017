@@ -1086,7 +1086,7 @@ MonoBehaviour:
   _ownerNumber: 0
   CheckMask:
     serializedVersion: 2
-    m_Bits: 512
+    m_Bits: 768
 --- !u!114 &114699802871130578
 MonoBehaviour:
   m_ObjectHideFlags: 1
