@@ -327,6 +327,11 @@ Prefab:
       propertyPath: m_Name
       value: Character
       objectReference: {fileID: 0}
+    - target: {fileID: 95045290169514770, guid: 799e4ee9be0657249958fe3862d6c27c,
+        type: 2}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 3472e2c8c18522c409944585f1325cf6, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 799e4ee9be0657249958fe3862d6c27c, type: 2}
   m_IsPrefabParent: 0
@@ -457,9 +462,19 @@ Prefab:
       propertyPath: m_AnchorMax.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1196907441333486, guid: c3f7b9f04771e4b4691d56dc05e333c4, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c3f7b9f04771e4b4691d56dc05e333c4, type: 2}
   m_IsPrefabParent: 0
+--- !u!114 &247171802 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114402152328404678, guid: c3f7b9f04771e4b4691d56dc05e333c4,
+    type: 2}
+  m_PrefabInternal: {fileID: 247171801}
+  m_Script: {fileID: 11500000, guid: e6b72e814901c2044bc99b5b44b2a21a, type: 3}
 --- !u!1 &292038280
 GameObject:
   m_ObjectHideFlags: 0
@@ -738,6 +753,21 @@ MonoBehaviour:
   cavalry: {fileID: 0}
   cavalryBuildTime: 1
   spawnPoint: {fileID: 1033966388}
+  SpawnArcherEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  SpawnInfantryEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  SpawnCavalryEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!114 &364820732
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -975,7 +1005,7 @@ MonoBehaviour:
   cavalryCost: 0
   infantryCost: 0
   passiveGoldIncrement: 1
-  passiveGoldTimer: 0
+  passiveGoldTimer: 0.1
   balance: 0
 --- !u!4 &508256899
 Transform:
@@ -1125,6 +1155,21 @@ MonoBehaviour:
   cavalry: {fileID: 0}
   cavalryBuildTime: 1
   spawnPoint: {fileID: 1033966388}
+  SpawnArcherEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  SpawnInfantryEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  SpawnCavalryEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!222 &548115457
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2188,6 +2233,116 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1321968254}
+--- !u!1001 &1409109641
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 224429681578649470, guid: 100398442cbd167469d456950b47b833,
+        type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224429681578649470, guid: 100398442cbd167469d456950b47b833,
+        type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224429681578649470, guid: 100398442cbd167469d456950b47b833,
+        type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224429681578649470, guid: 100398442cbd167469d456950b47b833,
+        type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224429681578649470, guid: 100398442cbd167469d456950b47b833,
+        type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224429681578649470, guid: 100398442cbd167469d456950b47b833,
+        type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224429681578649470, guid: 100398442cbd167469d456950b47b833,
+        type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224429681578649470, guid: 100398442cbd167469d456950b47b833,
+        type: 2}
+      propertyPath: m_RootOrder
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 224429681578649470, guid: 100398442cbd167469d456950b47b833,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224429681578649470, guid: 100398442cbd167469d456950b47b833,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224429681578649470, guid: 100398442cbd167469d456950b47b833,
+        type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224429681578649470, guid: 100398442cbd167469d456950b47b833,
+        type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224429681578649470, guid: 100398442cbd167469d456950b47b833,
+        type: 2}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224429681578649470, guid: 100398442cbd167469d456950b47b833,
+        type: 2}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224429681578649470, guid: 100398442cbd167469d456950b47b833,
+        type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224429681578649470, guid: 100398442cbd167469d456950b47b833,
+        type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224429681578649470, guid: 100398442cbd167469d456950b47b833,
+        type: 2}
+      propertyPath: m_Pivot.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224429681578649470, guid: 100398442cbd167469d456950b47b833,
+        type: 2}
+      propertyPath: m_Pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114862319086894676, guid: 100398442cbd167469d456950b47b833,
+        type: 2}
+      propertyPath: spawnPoint
+      value: 
+      objectReference: {fileID: 1033966388}
+    - target: {fileID: 114862319086894676, guid: 100398442cbd167469d456950b47b833,
+        type: 2}
+      propertyPath: infantry
+      value: 
+      objectReference: {fileID: 1895425108}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 100398442cbd167469d456950b47b833, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &1476408392
 GameObject:
   m_ObjectHideFlags: 0
@@ -2344,6 +2499,21 @@ MonoBehaviour:
   cavalry: {fileID: 0}
   cavalryBuildTime: 1
   spawnPoint: {fileID: 497225726}
+  SpawnArcherEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  SpawnInfantryEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  SpawnCavalryEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!114 &1506057785
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2516,6 +2686,21 @@ MonoBehaviour:
   cavalry: {fileID: 0}
   cavalryBuildTime: 1
   spawnPoint: {fileID: 1033966388}
+  SpawnArcherEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  SpawnInfantryEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  SpawnCavalryEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!222 &1545023862
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2681,13 +2866,14 @@ Prefab:
       propertyPath: m_RootOrder
       value: 11
       objectReference: {fileID: 0}
-    - target: {fileID: 1753704000467094, guid: 799e4ee9be0657249958fe3862d6c27c, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 799e4ee9be0657249958fe3862d6c27c, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1895425108 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1753704000467094, guid: 799e4ee9be0657249958fe3862d6c27c,
+    type: 2}
+  m_PrefabInternal: {fileID: 1895425107}
 --- !u!1 &1940147042
 GameObject:
   m_ObjectHideFlags: 0
@@ -2785,6 +2971,7 @@ MonoBehaviour:
   arrowButtonSpeed: 1
   minCamPos: 0
   maxCamPos: 28
+  pauseMenuController: {fileID: 247171802}
 --- !u!1 &2136467284
 GameObject:
   m_ObjectHideFlags: 0
