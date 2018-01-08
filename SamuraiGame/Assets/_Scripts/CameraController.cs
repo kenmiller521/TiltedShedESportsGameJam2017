@@ -38,7 +38,7 @@ public class CameraController : MonoBehaviour {
         }
         
         //Get left and right arrow keyboard input and apply the amount on the horizontal axis to the camera position
-        if(Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.RightArrow))
+        if(Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D))
             Camera.main.transform.position = new Vector3(Mathf.Clamp(Camera.main.transform.position.x + Input.GetAxis("Horizontal") * arrowButtonSpeed, minCamPos, maxCamPos), Camera.main.transform.position.y, Camera.main.transform.position.z);
     }
 }

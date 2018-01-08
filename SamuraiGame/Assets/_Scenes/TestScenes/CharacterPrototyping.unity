@@ -135,7 +135,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 101739018}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3565d77e5d5f4c046b0606cc57952e87, type: 3}
   m_Name: 
@@ -169,7 +169,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &136679596
 Prefab:
@@ -208,7 +208,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 57977547c59abb546bbb1501e3c417db, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 57977547c59abb546bbb1501e3c417db, type: 2}
       propertyPath: m_LocalEulerAnglesHint.y
@@ -252,6 +252,56 @@ Prefab:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 57977547c59abb546bbb1501e3c417db, type: 2}
+  m_IsPrefabParent: 0
+--- !u!1001 &197222326
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4810889460022260, guid: 799e4ee9be0657249958fe3862d6c27c, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4810889460022260, guid: 799e4ee9be0657249958fe3862d6c27c, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4810889460022260, guid: 799e4ee9be0657249958fe3862d6c27c, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4810889460022260, guid: 799e4ee9be0657249958fe3862d6c27c, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4810889460022260, guid: 799e4ee9be0657249958fe3862d6c27c, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4810889460022260, guid: 799e4ee9be0657249958fe3862d6c27c, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4810889460022260, guid: 799e4ee9be0657249958fe3862d6c27c, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4810889460022260, guid: 799e4ee9be0657249958fe3862d6c27c, type: 2}
+      propertyPath: m_RootOrder
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 1753704000467094, guid: 799e4ee9be0657249958fe3862d6c27c, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1753704000467094, guid: 799e4ee9be0657249958fe3862d6c27c, type: 2}
+      propertyPath: m_Name
+      value: CharacterPrototype_Archer
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 799e4ee9be0657249958fe3862d6c27c, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &292038280
 GameObject:
@@ -528,8 +578,8 @@ MonoBehaviour:
   archerBuildTime: 2
   infantry: {fileID: 1753704000467094, guid: 799e4ee9be0657249958fe3862d6c27c, type: 2}
   infantryBuildTime: 1
-  calvary: {fileID: 0}
-  calvaryBuildTime: 3
+  cavalry: {fileID: 0}
+  cavalryBuildTime: 1
   spawnPoint: {fileID: 1033966388}
 --- !u!114 &364820732
 MonoBehaviour:
@@ -577,7 +627,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400004, guid: d024aaa09f4080d448d16f62d1a97b0b, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -16
+      value: -10
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: d024aaa09f4080d448d16f62d1a97b0b, type: 2}
       propertyPath: m_LocalPosition.y
@@ -605,7 +655,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: d024aaa09f4080d448d16f62d1a97b0b, type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d024aaa09f4080d448d16f62d1a97b0b, type: 2}
@@ -670,7 +720,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &490275641 stripped
 GameObject:
@@ -765,7 +815,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OwnerNumber: 0
   archerCost: 0
-  calvaryCost: 0
+  cavalryCost: 0
   infantryCost: 0
   passiveGoldIncrement: 1
   passiveGoldTimer: 0
@@ -781,7 +831,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &548115452
 GameObject:
@@ -915,8 +965,8 @@ MonoBehaviour:
   archerBuildTime: 2
   infantry: {fileID: 0}
   infantryBuildTime: 1
-  calvary: {fileID: 0}
-  calvaryBuildTime: 3
+  cavalry: {fileID: 0}
+  cavalryBuildTime: 1
   spawnPoint: {fileID: 1033966388}
 --- !u!222 &548115457
 CanvasRenderer:
@@ -949,7 +999,7 @@ Rigidbody2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 597448890}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -975,7 +1025,7 @@ Transform:
   - {fileID: 1033966388}
   - {fileID: 1476408393}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &597448893
 MonoBehaviour:
@@ -1094,7 +1144,7 @@ RectTransform:
   - {fileID: 364820730}
   - {fileID: 1506057783}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1128,7 +1178,7 @@ Rigidbody2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 685287639}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -1177,13 +1227,13 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 685287639}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.82, y: -2.43, z: 0}
+  m_LocalPosition: {x: 34.8, y: -2.43, z: 0}
   m_LocalScale: {x: 1, y: 9.179237, z: 1}
   m_Children:
   - {fileID: 497225726}
   - {fileID: 331798813}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &685287644
 MonoBehaviour:
@@ -2134,8 +2184,8 @@ MonoBehaviour:
   archerBuildTime: 2
   infantry: {fileID: 1442066375181620, guid: 818ce2dd5a29382499215c29f4b44dfe, type: 2}
   infantryBuildTime: 1
-  calvary: {fileID: 0}
-  calvaryBuildTime: 3
+  cavalry: {fileID: 0}
+  cavalryBuildTime: 1
   spawnPoint: {fileID: 497225726}
 --- !u!114 &1506057785
 MonoBehaviour:
@@ -2306,8 +2356,8 @@ MonoBehaviour:
   archerBuildTime: 2
   infantry: {fileID: 0}
   infantryBuildTime: 1
-  calvary: {fileID: 0}
-  calvaryBuildTime: 3
+  cavalry: {fileID: 0}
+  cavalryBuildTime: 1
   spawnPoint: {fileID: 1033966388}
 --- !u!222 &1545023862
 CanvasRenderer:
@@ -2426,7 +2476,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4431360455462600, guid: 818ce2dd5a29382499215c29f4b44dfe, type: 2}
       propertyPath: m_RootOrder
-      value: 8
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1442066375181620, guid: 818ce2dd5a29382499215c29f4b44dfe, type: 2}
       propertyPath: m_IsActive
@@ -2472,7 +2522,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4810889460022260, guid: 799e4ee9be0657249958fe3862d6c27c, type: 2}
       propertyPath: m_RootOrder
-      value: 7
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 1753704000467094, guid: 799e4ee9be0657249958fe3862d6c27c, type: 2}
       propertyPath: m_IsActive
@@ -2492,6 +2542,7 @@ GameObject:
   - component: {fileID: 1940147045}
   - component: {fileID: 1940147044}
   - component: {fileID: 1940147043}
+  - component: {fileID: 1940147047}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -2562,6 +2613,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1940147047
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1940147042}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b56b2d147d8cf0648a6e796c7d9a4462, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 20
+  arrowButtonSpeed: 1
+  minCamPos: 0
+  maxCamPos: 28
 --- !u!1 &2136467284
 GameObject:
   m_ObjectHideFlags: 0
@@ -2591,7 +2657,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OwnerNumber: 1
   archerCost: 0
-  calvaryCost: 0
+  cavalryCost: 0
   infantryCost: 0
   passiveGoldIncrement: 1
   passiveGoldTimer: 0
@@ -2607,7 +2673,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2139043527
 GameObject:
