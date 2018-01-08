@@ -21,6 +21,6 @@ public class PlayerCastleDied : SubscriberBase<HealthManager>
     {
         Debug.Log("You lose");
 
-        if (!LoseScreen) LoseScreen.SetActive(true);
+        LoseScreen.SetActive(true);
     }
 }
