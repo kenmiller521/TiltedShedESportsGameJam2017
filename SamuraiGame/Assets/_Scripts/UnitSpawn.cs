@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 using UnityEngine;
 
 public class UnitSpawn : MonoBehaviour
@@ -10,11 +11,11 @@ public class UnitSpawn : MonoBehaviour
     public GameObject infantry;
     public float infantryBuildTime = 1;
 
-    public GameObject calvary;
-    public float calvaryBuildTime = 1;
+    public GameObject cavalry;
+    public float cavalryBuildTime = 1;
 
     public Transform spawnPoint;
-
+    
 	// Use this for initialization
 	void Start ()
     {		
@@ -49,15 +50,17 @@ public class UnitSpawn : MonoBehaviour
         Instantiate(infantry, spawnPoint.position, infantry.transform.rotation);
     }
 
-    public void SpawnCalvary()
+    public void SpawnCavalry()
     {
-        GoldManager.ManagerInstances[0].DeductGold(GoldManager.ManagerInstances[0].calvaryCost);
-        StartCoroutine(SpawnCalvaryIEnum());
+        GoldManager.ManagerInstances[0].DeductGold(GoldManager.ManagerInstances[0].cavalryCost);
+        StartCoroutine(SpawnCavalryIEnum());
     }
 
-    public IEnumerator SpawnCalvaryIEnum()
+    public IEnumerator SpawnCavalryIEnum()
     {
-        yield return new WaitForSeconds(calvaryBuildTime);
-        Instantiate(calvary, spawnPoint.position, calvary.transform.rotation);
+        yield return new WaitForSeconds(cavalryBuildTime);
+        Instantiate(cavalry, spawnPoint.position, cavalry.transform.rotation);
     }
+
+    
 }
