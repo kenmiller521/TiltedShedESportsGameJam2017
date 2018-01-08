@@ -768,7 +768,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _projectilePrefab: {fileID: 1219551973175742, guid: 077f0d73adef3934db9052a55b4a897e,
     type: 2}
-  _spawnTransform: {fileID: 0}
   _shootVector: {x: 1, y: 1}
   _shootForce: 8
 --- !u!4 &419802459
@@ -1397,6 +1396,11 @@ Prefab:
     - target: {fileID: 1463111563508398, guid: 100398442cbd167469d456950b47b833, type: 2}
       propertyPath: m_Name
       value: Cavalry
+      objectReference: {fileID: 0}
+    - target: {fileID: 114121496194032154, guid: 100398442cbd167469d456950b47b833,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SpawnCavalry
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 100398442cbd167469d456950b47b833, type: 2}
@@ -2180,7 +2184,7 @@ Prefab:
     - target: {fileID: 224381356101466086, guid: c3f7b9f04771e4b4691d56dc05e333c4,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -14.7
+      value: -14.700012
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c3f7b9f04771e4b4691d56dc05e333c4, type: 2}
