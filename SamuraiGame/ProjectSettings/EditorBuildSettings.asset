@@ -11,3 +11,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Scenes/TestScenes/CharacterPrototyping.unity
     guid: 6e06ecf4054efb642a1f9bfd2bcdb256
+  - enabled: 1
+    path: Assets/_Scenes/TestScenes/MainScene.unity
+    guid: c20d8f6588bcec14983a4dff22693363
