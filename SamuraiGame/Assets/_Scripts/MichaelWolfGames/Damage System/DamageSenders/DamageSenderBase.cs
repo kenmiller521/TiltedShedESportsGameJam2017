@@ -32,6 +32,8 @@ namespace MichaelWolfGames.DamageSystem
             protected set { defaultDamageValue = value; }
         }
 
+        
+
         public bool CanDealDamage
         {
             get { return _canDealDamage; }
@@ -70,6 +72,7 @@ namespace MichaelWolfGames.DamageSystem
             IDamagable damagable = damageTarget.GetComponent<IDamagable>();
             if (damagable != null)
             {
+                if (this.faction == damagable.GetFaction()) return false;
                 damagable.ApplyDamage(this, e);
                 OnDealDamage(this, e);
                 return true;

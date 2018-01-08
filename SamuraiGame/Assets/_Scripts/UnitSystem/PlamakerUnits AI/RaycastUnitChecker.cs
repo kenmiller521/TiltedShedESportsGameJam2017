@@ -19,9 +19,10 @@ public class RaycastUnitChecker : MonoBehaviour
     public bool CheckUnits(out GameObject resultGameObject, out float resultDistance, float checkDist)
     {
         RaycastHit2D[] hits;
-        hits = Physics2D.LinecastAll(this.transform.position, this.transform.position + this.transform.right * checkDist, CheckMask.value);
+        hits = Physics2D.LinecastAll(this.transform.position, this.transform.position + this.transform.forward * checkDist, CheckMask.value);
         if (hits.Length > 0)
         {
+            //Debug.DrawLine(this.transform.position, this.transform.position + this.transform.right * checkDist, Color.red);
             foreach (var h in hits)
             {
                 var go = (h.collider.attachedRigidbody) ? h.collider.attachedRigidbody.gameObject : h.collider.gameObject;
@@ -31,6 +32,7 @@ public class RaycastUnitChecker : MonoBehaviour
                     if (unit.OwnerNumber != _ownerNumber)
                     {
                         // NOTE: This doesn't guaruntee its the closest.
+                        Debug.DrawLine(this.transform.position, h.point, Color.blue);
                         resultGameObject = go;
                         resultDistance = h.distance;
                         return true;
@@ -42,6 +44,7 @@ public class RaycastUnitChecker : MonoBehaviour
         {
             Debug.Log("LineCast Empty");
         }
+        Debug.DrawLine(this.transform.position, this.transform.position + this.transform.right * checkDist, Color.red);
         resultGameObject = null;
         resultDistance = float.MaxValue;
         return false;
