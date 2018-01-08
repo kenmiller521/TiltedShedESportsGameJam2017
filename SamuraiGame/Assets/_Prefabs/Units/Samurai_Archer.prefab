@@ -141,6 +141,7 @@ GameObject:
   - component: {fileID: 4986847670040490}
   - component: {fileID: 212889351325264968}
   - component: {fileID: 95710686114864848}
+  - component: {fileID: 114059500974412068}
   m_Layer: 8
   m_Name: Character
   m_TagString: Player
@@ -366,6 +367,21 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114059500974412068
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1847546091739364}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a9f74e88c6350544a542400fc818705, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _projectilePrefab: {fileID: 1219551973175742, guid: 077f0d73adef3934db9052a55b4a897e,
+    type: 2}
+  _shootVector: {x: 1, y: 0.6}
+  _shootForce: 8
 --- !u!114 &114061744265068146
 MonoBehaviour:
   m_ObjectHideFlags: 1
