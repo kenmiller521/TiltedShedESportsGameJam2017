@@ -8,13 +8,13 @@ using System;
 public class UnitSpawn : MonoBehaviour
 {
     public GameObject archer;
-    public float archerBuildTime = 1;
+    public float archerBuildTime = 2;
 
     public GameObject infantry;
     public float infantryBuildTime = 1;
 
     public GameObject cavalry;
-    public float cavalryBuildTime = 1;
+    public float cavalryBuildTime = 3;
 
     public Transform spawnPoint;
 
@@ -44,14 +44,6 @@ public class UnitSpawn : MonoBehaviour
     public IEnumerator SpawnArcherIEnum()
     {
         GoldManager.ManagerInstances[ownerNumber].DeductGold(GoldManager.ManagerInstances[ownerNumber].archerCost);
-        //float timer = 0;
-
-        //while(timer < archerBuildTime)
-        //{
-        //    timer += Time.deltaTime;
-        //    buttonFill.UpdateArcherButton(timer / archerBuildTime);
-        //    yield return null;
-        //}
         yield return new WaitForSeconds(archerBuildTime);
         Instantiate(archer, spawnPoint.position, archer.transform.rotation);
     }
@@ -69,20 +61,8 @@ public class UnitSpawn : MonoBehaviour
     public IEnumerator SpawnInfantryIEnum()
     {       
         GoldManager.ManagerInstances[ownerNumber].DeductGold(GoldManager.ManagerInstances[ownerNumber].infantryCost);
-       
-        //float timer = 0;
-
-        //while (timer < infantryBuildTime)
-        //{
-        //    timer += Time.deltaTime;
-        //    buttonFill.UpdateInfantryButton(timer / infantryBuildTime);
-        //    yield return null;
-        //}
         yield return new WaitForSeconds(infantryBuildTime);
-
         Instantiate(infantry, spawnPoint.position, infantry.transform.rotation);
-        
-       
     }
 
     public void SpawnCavalry()
@@ -98,19 +78,7 @@ public class UnitSpawn : MonoBehaviour
     public IEnumerator SpawnCavalryIEnum()
     {
         GoldManager.ManagerInstances[ownerNumber].DeductGold(GoldManager.ManagerInstances[ownerNumber].cavalryCost);
-
-       
-        //float timer = 0;
-
-        //while (timer < cavalryBuildTime)
-        //{
-        //    timer += Time.deltaTime;
-        //    buttonFill.UpdateCalvaryButton(timer / cavalryBuildTime);
-        //    yield return null;
-        //}
-
         yield return new WaitForSeconds(cavalryBuildTime);
-
         Instantiate(cavalry, spawnPoint.position, cavalry.transform.rotation);
     }
 
