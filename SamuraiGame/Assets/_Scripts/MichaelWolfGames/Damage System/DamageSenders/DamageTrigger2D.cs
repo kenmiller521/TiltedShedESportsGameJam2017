@@ -27,8 +27,8 @@ namespace MichaelWolfGames.DamageSystem
         }
         protected virtual Damage.DamageEventArgs GetDamageEventArgumentsFromCollider(Collider2D col)
         {
-            //ToDo: Fix this point finding for 2D.
-            Vector3 point = transform.position;// ClosestPointOnBounds(transform.position);
+            Vector3 point = col.bounds.ClosestPoint(this.transform.position);
+            //transform.position;// ClosestPointOnBounds(transform.position);
             return new Damage.DamageEventArgs(DamageValue, point, damageType);
         }
 

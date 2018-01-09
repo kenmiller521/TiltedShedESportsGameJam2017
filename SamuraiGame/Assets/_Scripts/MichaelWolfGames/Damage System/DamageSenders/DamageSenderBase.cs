@@ -20,7 +20,7 @@ namespace MichaelWolfGames.DamageSystem
         [SerializeField] protected bool _canDealDamage;
 
         //protected float damageValue
-        public event Damage.DamageEventHandler OnDealDamage = delegate(object sender, Damage.DamageEventArgs e) {  };
+        public event Damage.DamageEventHandler OnDealDamage = delegate(object receiver, Damage.DamageEventArgs e) {  };
 
         /// <summary>
         /// Property for DamageValue.
@@ -74,7 +74,7 @@ namespace MichaelWolfGames.DamageSystem
             {
                 if (this.faction == damagable.GetFaction()) return false;
                 damagable.ApplyDamage(this, e);
-                OnDealDamage(this, e);
+                OnDealDamage(damagable, e);
                 return true;
             }
             // No IDamagable Found - Return false.

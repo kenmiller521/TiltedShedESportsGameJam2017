@@ -55,7 +55,7 @@ public class OpponentAI : MonoBehaviour
 
     private void SpawnEnemy(EnemyType choice)
     {
-        Debug.Log("Spawning");
+        //Debug.Log("Spawning");
         switch (choice)
         {
             case EnemyType.Infantry:

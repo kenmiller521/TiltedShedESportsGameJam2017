@@ -37,7 +37,7 @@ public class CheckForClosestEnemyUnit : FsmStateAction
         _unitChecker = go.GetComponent<RaycastUnitChecker>();
         if(_unitChecker)
         {
-            Debug.Log("Found Unit Checker");
+            //Debug.Log("Found Unit Checker");
         }
         //_raycastTransform = go.transform;
     }
@@ -57,7 +57,7 @@ public class CheckForClosestEnemyUnit : FsmStateAction
             {
                 _closestEnemyUnitVar.Value = resultObj;
                 _distanceVar.Value = resultDist;
-                Debug.Log("FOUND CLOSEST");
+                //Debug.Log("FOUND CLOSEST");
             }
         }
     }
