@@ -21,9 +21,33 @@ public class CameraController : MonoBehaviour {
     private Vector3 _newMousePosition;
     //The amount of distance between last frame and current frame
     private float _deltaMouseDistance;
-
+    private Vector3 touchOrigin = -Vector2.one;
     //Update is called once per frame
-	void Update () {
+	void Update ()
+    {
+#if UNITY_ANDROID
+        if(Input.touchCount > 0)
+        {
+            Touch myTouch = Input.touches[0];
+
+            if (myTouch.phase == TouchPhase.Began)
+            {
+                _newMousePosition = Camera.main.ScreenToViewportPoint(myTouch.position);
+                _prevMousePosition = _newMousePosition;
+                //touchOrigin = myTouch.position;
+            }
+            else
+            {
+                _prevMousePosition = _newMousePosition;
+                _newMousePosition = Camera.main.ScreenToViewportPoint(myTouch.position);
+                _deltaMouseDistance = _newMousePosition.x - _prevMousePosition.x;
+                Camera.main.transform.position = new Vector3(Mathf.Clamp(Camera.main.transform.position.x - _deltaMouseDistance * speed, minCamPos, maxCamPos), Camera.main.transform.position.y, Camera.main.transform.position.z);
+            }
+        }
+
+
+
+#elif UNITY_STANDALONE || UNITY_EDITOR
         if(!pauseMenuController.gameIsPaused)
         {
             if (Input.GetMouseButtonDown(0))
@@ -46,5 +70,7 @@ public class CameraController : MonoBehaviour {
                 Camera.main.transform.position = new Vector3(Mathf.Clamp(Camera.main.transform.position.x + Input.GetAxis("Horizontal") * arrowButtonSpeed, minCamPos, maxCamPos), Camera.main.transform.position.y, Camera.main.transform.position.z);
 
         }
+#endif
     }
+
 }
