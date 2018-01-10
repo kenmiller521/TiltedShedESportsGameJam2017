@@ -43,6 +43,7 @@ GameObject:
   - component: {fileID: 114668053773339318}
   - component: {fileID: 114716177192931410}
   - component: {fileID: 114048543813355538}
+  - component: {fileID: 114372277168475254}
   m_Layer: 8
   m_Name: Samurai_Calvary
   m_TagString: Untagged
@@ -450,6 +451,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SubscribableObject: {fileID: 0}
   _knockbackForce: 5
+--- !u!114 &114372277168475254
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1347985474775956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 060ee7c2cba442bf86ed77315cf27013, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SubscribableObject: {fileID: 0}
+  _delay: 1.1
+  _rootGameObject: {fileID: 0}
 --- !u!114 &114420504056826926
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -489,8 +504,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d08f91df3bd212f429df17f53ce2f364, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_MoveForce: 20
-  m_MaxSpeed: 2
+  m_MoveForce: 25
+  m_MaxSpeed: 3
   m_JumpForce: 0
   m_CrouchSpeed: 0.36
   m_AirControl: 0
@@ -513,7 +528,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SubscribableObject: {fileID: 0}
   _unit: {fileID: 0}
-  _goldValue: 50
+  _goldValue: 100
 --- !u!114 &114755877512598312
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -526,8 +541,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Faction: 1
-  maxHealth: 125
-  currentHealth: 1254
+  maxHealth: 150
+  currentHealth: 150
   _debug: 0
   _invulnTime: 0.25
   _isInvulnerable: 0

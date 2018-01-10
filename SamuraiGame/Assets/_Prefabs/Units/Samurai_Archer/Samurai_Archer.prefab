@@ -57,6 +57,7 @@ GameObject:
   - component: {fileID: 114980291818157786}
   - component: {fileID: 114621773071956076}
   - component: {fileID: 114187045627504644}
+  - component: {fileID: 114928326768323760}
   m_Layer: 8
   m_Name: Samurai_Archer
   m_TagString: Untagged
@@ -1096,7 +1097,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SubscribableObject: {fileID: 0}
   _unit: {fileID: 0}
-  _goldValue: 50
+  _goldValue: 75
 --- !u!114 &114913151271782700
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1112,6 +1113,20 @@ MonoBehaviour:
   _spriteRenderer: {fileID: 0}
   _color: {r: 1, g: 0, b: 0, a: 1}
   _duration: 0.15
+--- !u!114 &114928326768323760
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1382238366173316}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 060ee7c2cba442bf86ed77315cf27013, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SubscribableObject: {fileID: 0}
+  _delay: 1.1
+  _rootGameObject: {fileID: 0}
 --- !u!114 &114980291818157786
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -27,9 +27,9 @@ public class UnitSpawn : MonoBehaviour
 
     //Build Icons
     public HorizontalLayoutGroup buildIcons;
-    public Image archerBuildImage;
-    public Image infantryBuildImage;
-    public Image cavalryBuildImage;
+    public GameObject archerBuildImage;
+    public GameObject infantryBuildImage;
+    public GameObject cavalryBuildImage;
 
     public void SpawnArcher()
     {
@@ -39,7 +39,9 @@ public class UnitSpawn : MonoBehaviour
 
             if(archerBuildImage)
             {
-                Instantiate(archerBuildImage, buildIcons.transform);
+                var go = Instantiate(archerBuildImage, buildIcons.transform);
+                var filler = go.GetComponent<ButtonFill>();
+                if (filler) filler.buildTime = archerBuildTime;
                 LayoutRebuilder.MarkLayoutForRebuild(buildIcons.transform as RectTransform);
             }        
         }
@@ -60,7 +62,9 @@ public class UnitSpawn : MonoBehaviour
 
             if(infantryBuildImage)
             {
-                Instantiate(infantryBuildImage, buildIcons.transform);
+                var go = Instantiate(infantryBuildImage, buildIcons.transform);
+                var filler = go.GetComponent<ButtonFill>();
+                if (filler) filler.buildTime = infantryBuildTime;
                 LayoutRebuilder.MarkLayoutForRebuild(buildIcons.transform as RectTransform);
             }           
         }
@@ -81,7 +85,9 @@ public class UnitSpawn : MonoBehaviour
 
             if(cavalryBuildImage)
             {
-                Instantiate(cavalryBuildImage, buildIcons.transform);
+                var go = Instantiate(cavalryBuildImage, buildIcons.transform);
+                var filler = go.GetComponent<ButtonFill>();
+                if (filler) filler.buildTime = cavalryBuildTime;
                 LayoutRebuilder.MarkLayoutForRebuild(buildIcons.transform as RectTransform);
             }
         }           

@@ -142,6 +142,7 @@ GameObject:
   - component: {fileID: 114456387343230802}
   - component: {fileID: 114096526131374192}
   - component: {fileID: 114197495591509358}
+  - component: {fileID: 114623903089655222}
   m_Layer: 9
   m_Name: YoKai_Archer
   m_TagString: Untagged
@@ -1073,6 +1074,20 @@ MonoBehaviour:
     handleAnimatorIK: 0
   fsmTemplate: {fileID: 0}
   eventHandlerComponentsAdded: 0
+--- !u!114 &114623903089655222
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1930100176493012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 060ee7c2cba442bf86ed77315cf27013, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SubscribableObject: {fileID: 0}
+  _delay: 1.1
+  _rootGameObject: {fileID: 0}
 --- !u!114 &114632066080210028
 MonoBehaviour:
   m_ObjectHideFlags: 1

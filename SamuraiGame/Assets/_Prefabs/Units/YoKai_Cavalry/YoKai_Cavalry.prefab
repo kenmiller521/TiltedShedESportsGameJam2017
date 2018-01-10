@@ -1048,8 +1048,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Faction: 2
-  maxHealth: 125
-  currentHealth: 1254
+  maxHealth: 150
+  currentHealth: 150
   _debug: 0
   _invulnTime: 0.25
   _isInvulnerable: 0
@@ -1091,7 +1091,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_MoveForce: 25
-  m_MaxSpeed: 2
+  m_MaxSpeed: 3
   m_JumpForce: 0
   m_CrouchSpeed: 0.36
   m_AirControl: 0
@@ -1185,7 +1185,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SubscribableObject: {fileID: 0}
   _unit: {fileID: 0}
-  _goldValue: 50
+  _goldValue: 75
 --- !u!212 &212229369711312792
 SpriteRenderer:
   m_ObjectHideFlags: 1

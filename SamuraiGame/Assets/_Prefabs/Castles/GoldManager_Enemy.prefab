@@ -1,0 +1,116 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1143259192252776}
+  m_IsPrefabParent: 1
+--- !u!1 &1143259192252776
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4812090395339026}
+  - component: {fileID: 114453161528801154}
+  - component: {fileID: 114644223008246978}
+  - component: {fileID: 114968860615532632}
+  m_Layer: 0
+  m_Name: GoldManager_Enemy
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4812090395339026
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1143259192252776}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3.6028378, y: -2.408391, z: -0.022839729}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114453161528801154
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1143259192252776}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a54e7188de4be11429e14b6a2127b872, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OwnerNumber: 1
+  infantryCost: 100
+  archerCost: 150
+  cavalryCost: 200
+  passiveGoldIncrement: 5
+  passiveGoldTimer: 0.5
+  balance: 80
+--- !u!114 &114644223008246978
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1143259192252776}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2ec2775590a3b747b85a50e7995511e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _goldManager: {fileID: 114453161528801154}
+  _unitSpawn: {fileID: 114968860615532632}
+  InfantryCost: 100
+  ArcherCost: 150
+  CalveryCost: 200
+--- !u!114 &114968860615532632
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1143259192252776}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80e061f2e4cc4f745959c5aabe2a6399, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  archer: {fileID: 1930100176493012, guid: 775ccc7a589dbf74fbb4f3937b1a8d92, type: 2}
+  archerBuildTime: 2
+  infantry: {fileID: 1642822966285806, guid: f20b911b791bf054e81a7a5c58255a79, type: 2}
+  infantryBuildTime: 1
+  cavalry: {fileID: 1477300942242328, guid: 6a40435adcca2044dacb974659b606fb, type: 2}
+  cavalryBuildTime: 1
+  spawnPoint: {fileID: 0}
+  ownerNumber: 1
+  SpawnArcherEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  SpawnInfantryEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  SpawnCavalryEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  buildIcons: {fileID: 0}
+  archerBuildImage: {fileID: 0}
+  infantryBuildImage: {fileID: 0}
+  cavalryBuildImage: {fileID: 0}
