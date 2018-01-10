@@ -1048,8 +1048,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Faction: 2
-  maxHealth: 150
-  currentHealth: 150
+  maxHealth: 200
+  currentHealth: 200
   _debug: 0
   _useInvuln: 0
   _invulnTime: 0.25
