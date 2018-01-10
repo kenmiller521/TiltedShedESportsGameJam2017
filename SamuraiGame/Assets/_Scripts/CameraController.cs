@@ -21,29 +21,35 @@ public class CameraController : MonoBehaviour {
     private Vector3 _newMousePosition;
     //The amount of distance between last frame and current frame
     private float _deltaMouseDistance;
-    private Vector3 touchOrigin = -Vector2.one;
     //Update is called once per frame
 	void Update ()
     {
 #if UNITY_ANDROID
-        if(Input.touchCount > 0)
+        //If the game is not paused
+        if (!pauseMenuController.gameIsPaused)
         {
-            Touch myTouch = Input.touches[0];
+            //If the touch count is greater than 0
+            if (Input.touchCount > 0)
+            {
+                Touch myTouch = Input.touches[0];
 
-            if (myTouch.phase == TouchPhase.Began)
-            {
-                _newMousePosition = Camera.main.ScreenToViewportPoint(myTouch.position);
-                _prevMousePosition = _newMousePosition;
-                //touchOrigin = myTouch.position;
-            }
-            else
-            {
-                _prevMousePosition = _newMousePosition;
-                _newMousePosition = Camera.main.ScreenToViewportPoint(myTouch.position);
-                _deltaMouseDistance = _newMousePosition.x - _prevMousePosition.x;
-                Camera.main.transform.position = new Vector3(Mathf.Clamp(Camera.main.transform.position.x - _deltaMouseDistance * speed, minCamPos, maxCamPos), Camera.main.transform.position.y, Camera.main.transform.position.z);
+                if (myTouch.phase == TouchPhase.Began)
+                {
+                    //Set the current and previous positions to be the same for correct distance calculations
+                    _newMousePosition = Camera.main.ScreenToViewportPoint(myTouch.position);
+                    _prevMousePosition = _newMousePosition;
+                }
+                else
+                {
+                    //Find the delta position and apply to the camera. The X position is clamped so the camera will only move a certain distance in the + or - X axis
+                    _prevMousePosition = _newMousePosition;
+                    _newMousePosition = Camera.main.ScreenToViewportPoint(myTouch.position);
+                    _deltaMouseDistance = _newMousePosition.x - _prevMousePosition.x;
+                    Camera.main.transform.position = new Vector3(Mathf.Clamp(Camera.main.transform.position.x - _deltaMouseDistance * speed, minCamPos, maxCamPos), Camera.main.transform.position.y, Camera.main.transform.position.z);
+                }
             }
         }
+            
 
 
 
