@@ -21,6 +21,7 @@ public class DisablePhysics2DOnDeath : SubscriberBase<HealthManager>
         var rb = GetComponent<Rigidbody2D>();
         if(rb)
         {
+            rb.velocity = Vector2.zero;
             rb.isKinematic = true;
         }
         foreach (var collider in this.GetComponentsInChildren<Collider2D>())

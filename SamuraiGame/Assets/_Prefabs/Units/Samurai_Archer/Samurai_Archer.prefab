@@ -196,7 +196,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1003809548999428}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.18, y: -0.33, z: 0}
+  m_LocalPosition: {x: 1.43, y: 0.64, z: 0}
   m_LocalScale: {x: 0.9999894, y: 0.9999911, z: 0.9999685}
   m_Children: []
   m_Father: {fileID: 4986847670040490}
@@ -382,8 +382,8 @@ MonoBehaviour:
   _projectilePrefab: {fileID: 1219551973175742, guid: 077f0d73adef3934db9052a55b4a897e,
     type: 2}
   _spawnTransform: {fileID: 4499864823243580}
-  _shootVector: {x: 1, y: 0.6}
-  _shootForce: 8
+  _shootVector: {x: 1, y: 0.4}
+  _shootForce: 9
 --- !u!114 &114061744265068146
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -632,12 +632,12 @@ MonoBehaviour:
           showInInspector: 1
           networkSync: 0
           value: 1
-        - useVariable: 0
-          name: 
+        - useVariable: 1
+          name: AttackRange
           tooltip: 
-          showInInspector: 0
+          showInInspector: 1
           networkSync: 0
-          value: 5
+          value: 7
         - useVariable: 1
           name: DistToEnemy
           tooltip: 
@@ -650,12 +650,12 @@ MonoBehaviour:
           showInInspector: 1
           networkSync: 0
           value: 0
-        - useVariable: 0
-          name: 
+        - useVariable: 1
+          name: AttackRange
           tooltip: 
-          showInInspector: 0
+          showInInspector: 1
           networkSync: 0
-          value: 5
+          value: 7
         - useVariable: 0
           name: 
           tooltip: 
@@ -960,6 +960,12 @@ MonoBehaviour:
     variables:
       floatVariables:
       - useVariable: 1
+        name: AttackRange
+        tooltip: 
+        showInInspector: 1
+        networkSync: 0
+        value: 7
+      - useVariable: 1
         name: DistToEnemy
         tooltip: 
         showInInspector: 1
@@ -1011,7 +1017,7 @@ MonoBehaviour:
       enumVariables: []
       categories:
       - 
-      variableCategoryIDs: 000000000000000000000000000000000000000000000000
+      variableCategoryIDs: 00000000000000000000000000000000000000000000000000000000
     description: 
     docUrl: 
     showStateLabel: 1
@@ -1229,7 +1235,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: 4ef48e716c769914cba2a97f21db620b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 495e61d37bb78774d9a1d3d2bf11494c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

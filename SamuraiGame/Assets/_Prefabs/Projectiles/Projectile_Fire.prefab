@@ -162,7 +162,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SubscribableObject: {fileID: 0}
-  _bonusDamage: 75
+  _bonusDamage: 25
   TargetType: 3
 --- !u!114 &114881033005056194
 MonoBehaviour:
