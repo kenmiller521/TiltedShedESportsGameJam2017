@@ -134,6 +134,7 @@ MonoBehaviour:
   maxHealth: 1000
   currentHealth: 1000
   _debug: 0
+  _useInvuln: 0
   _invulnTime: 0.25
   _isInvulnerable: 0
 --- !u!114 &114269476708651776
@@ -230,7 +231,7 @@ MonoBehaviour:
           name: FINISHED
           isSystemEvent: 1
           isGlobal: 0
-        toState: 
+        toState: Spawn
         linkStyle: 0
         linkConstraint: 0
         colorIndex: 0

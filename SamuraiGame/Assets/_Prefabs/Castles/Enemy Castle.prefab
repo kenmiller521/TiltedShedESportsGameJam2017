@@ -207,7 +207,7 @@ MonoBehaviour:
           name: FINISHED
           isSystemEvent: 1
           isGlobal: 0
-        toState: 
+        toState: Spawn
         linkStyle: 0
         linkConstraint: 0
         colorIndex: 0
@@ -361,7 +361,7 @@ MonoBehaviour:
     locked: 0
     manualUpdate: 0
     keepDelayedEventsOnStateExit: 0
-    preprocessed: 1
+    preprocessed: 0
     ExposedEvents: []
     RestartOnEnable: 1
     EnableDebugFlow: 0
@@ -410,6 +410,7 @@ MonoBehaviour:
   maxHealth: 1000
   currentHealth: 1000
   _debug: 0
+  _useInvuln: 0
   _invulnTime: 0.25
   _isInvulnerable: 0
 --- !u!212 &212964431082673984
