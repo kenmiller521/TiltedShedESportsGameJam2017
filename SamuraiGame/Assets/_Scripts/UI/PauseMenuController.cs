@@ -9,8 +9,10 @@ public class PauseMenuController : OptionsMenuController {
     UnityEvent pauseEvent;
     public bool gameIsPaused;
     public bool isOpen = false;
-	// Use this for initialization
-	void Start () {
+
+    void Start ()
+	{
+	    Time.timeScale = 1f;
         if (pauseEvent == null)
             pauseEvent = new UnityEvent();
 
@@ -18,11 +20,11 @@ public class PauseMenuController : OptionsMenuController {
         pauseEvent.AddListener(ClosePausePanel);
     }
 	
-	// Update is called once per frame
-	void Update () {
+	void Update ()
+    {
 		if(Input.GetKeyDown(KeyCode.Escape))
         {
-            if (!isOpen)
+            if (!gameIsPaused)
             {
                 OpenPausePanel();
             }
@@ -36,19 +38,28 @@ public class PauseMenuController : OptionsMenuController {
     public void OpenPausePanel()
     {
         isOpen = true;
-        gameIsPaused = true;
-        Time.timeScale = 0;
+        Pause();
         pausePanel.SetActive(true);
     }
     public void ClosePausePanel()
     {
         isOpen = false;
-        gameIsPaused = false;
-        Time.timeScale = 1;
+        UnPause();
         pausePanel.SetActive(false);
     }
     public void LoadMainMenu(string sceneName)
     {
         SceneManager.LoadScene(sceneName);
+    }
+
+    public void Pause()
+    {
+        gameIsPaused = true;
+        Time.timeScale = 0;
+    }
+    public void UnPause()
+    {
+        gameIsPaused = false;
+        Time.timeScale = 1;
     }
 }
