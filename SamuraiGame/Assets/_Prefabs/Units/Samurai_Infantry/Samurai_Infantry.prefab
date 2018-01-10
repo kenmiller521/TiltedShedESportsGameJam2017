@@ -365,6 +365,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   OwnerNumber: 0
+  Type: 1
 --- !u!114 &114200731367494022
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1035,6 +1036,7 @@ MonoBehaviour:
   maxHealth: 100
   currentHealth: 100
   _debug: 0
+  _useInvuln: 0
   _invulnTime: 0.25
   _isInvulnerable: 0
 --- !u!114 &114575980653273910

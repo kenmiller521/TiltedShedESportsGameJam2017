@@ -427,10 +427,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Padding:
-    m_Left: 0
-    m_Right: 0
-    m_Top: 0
-    m_Bottom: 0
+    m_Left: 5
+    m_Right: 5
+    m_Top: 5
+    m_Bottom: 5
   m_ChildAlignment: 0
   m_Spacing: 20
   m_ChildForceExpandWidth: 0
@@ -568,11 +568,11 @@ MonoBehaviour:
     m_BestFit: 1
     m_MinSize: 3
     m_MaxSize: 53
-    m_Alignment: 3
+    m_Alignment: 5
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
+    m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: 1000
 --- !u!114 &114506872440909362
@@ -779,14 +779,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Padding:
-    m_Left: 0
-    m_Right: 0
-    m_Top: 0
-    m_Bottom: 0
+    m_Left: 5
+    m_Right: 5
+    m_Top: 5
+    m_Bottom: 5
   m_ChildAlignment: 2
   m_Spacing: 0
-  m_ChildForceExpandWidth: 1
-  m_ChildForceExpandHeight: 1
+  m_ChildForceExpandWidth: 0
+  m_ChildForceExpandHeight: 0
   m_ChildControlWidth: 0
   m_ChildControlHeight: 0
 --- !u!114 &114785500241848132
@@ -886,11 +886,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   archer: {fileID: 1382238366173316, guid: 3017d76964eca684ab51b8f03e78d2d3, type: 2}
-  archerBuildTime: 2
+  archerBuildTime: 3
   infantry: {fileID: 1860096742331322, guid: 2d03e000ba5361c4e93f92549fa4259d, type: 2}
-  infantryBuildTime: 1
+  infantryBuildTime: 2
   cavalry: {fileID: 1347985474775956, guid: 3ece41b0adc7f5e46a4a5fc49011a32b, type: 2}
-  cavalryBuildTime: 1
+  cavalryBuildTime: 5
   spawnPoint: {fileID: 0}
   ownerNumber: 0
   SpawnArcherEvent:
@@ -909,11 +909,11 @@ MonoBehaviour:
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   buildIcons: {fileID: 114125030127449030}
-  archerBuildImage: {fileID: 114811635590551474, guid: a91f99e43f7935543b08c2510f17cc11,
+  archerBuildImage: {fileID: 1776796899316570, guid: f271650954ef5c247b07c81588897b7a,
     type: 2}
-  infantryBuildImage: {fileID: 114840398818311724, guid: 224101de3814c2d45a7c417c2c36207e,
+  infantryBuildImage: {fileID: 1922839188738220, guid: ea95c811dcf835d459546c85b947c9ef,
     type: 2}
-  cavalryBuildImage: {fileID: 114792384576716600, guid: c77b0a91ede9fca49bfe30827a1fa926,
+  cavalryBuildImage: {fileID: 1158804983339154, guid: fdc254f48964c2149a046223978df0fc,
     type: 2}
 --- !u!114 &114929379302572324
 MonoBehaviour:
@@ -1123,7 +1123,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 226.9, y: 80.5}
+  m_SizeDelta: {x: 113.4, y: 80.5}
   m_Pivot: {x: 0, y: 1}
 --- !u!224 &224429681578649470
 RectTransform:
@@ -1182,8 +1182,8 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 79.1, y: 80.5}
-  m_Pivot: {x: 0, y: 0.5}
+  m_SizeDelta: {x: 68.7, y: 71.3}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224520237687561174
 RectTransform:
   m_ObjectHideFlags: 1
@@ -1257,7 +1257,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 561.2, y: 100}
+  m_SizeDelta: {x: 560, y: 140}
   m_Pivot: {x: 0, y: 1}
 --- !u!224 &224801883743777500
 RectTransform:

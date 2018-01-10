@@ -6,6 +6,7 @@ public class OpponentAI : MonoBehaviour
 {
     [SerializeField] private GoldManager _goldManager;
     [SerializeField] private UnitSpawn _unitSpawn;
+    [SerializeField] private EnemyType[] _initialQueue;
 
     public int InfantryCost = 100;
     public int ArcherCost = 150;
@@ -18,16 +19,20 @@ public class OpponentAI : MonoBehaviour
         Calvery
     }
 
-    private Queue<EnemyType> choiceQueue = new Queue<EnemyType>();
+    private Queue<EnemyType> _choiceQueue = new Queue<EnemyType>();
 
+    private void Start()
+    {
+        _choiceQueue = new Queue<EnemyType>(_initialQueue);
+    }
 	
 	void FixedUpdate ()
     {
-        if (choiceQueue.Count == 0)
+        if (_choiceQueue.Count == 0)
             MakeChoice();
-		if(CheckIfCanAffordChoice(choiceQueue.Peek()))
+		if(CheckIfCanAffordChoice(_choiceQueue.Peek()))
         {
-            SpawnEnemy(choiceQueue.Dequeue());
+            SpawnEnemy(_choiceQueue.Dequeue());
             MakeChoice();
         }
 	}
@@ -35,7 +40,7 @@ public class OpponentAI : MonoBehaviour
     private void MakeChoice()
     {
         EnemyType choice = (EnemyType)Random.Range(0, 3);
-        choiceQueue.Enqueue(choice);
+        _choiceQueue.Enqueue(choice);
     }
 
     private bool CheckIfCanAffordChoice(EnemyType choice)

@@ -13,6 +13,7 @@ namespace MichaelWolfGames.DamageSystem
 	{
         // (See Comments Above.)
 	    [SerializeField] protected bool _debug;
+	    [SerializeField] protected bool _useInvuln = false;
 	    [SerializeField] protected float _invulnTime = 0.25f;
 	    [SerializeField] protected bool _isInvulnerable = false;
 	    public override void ApplyDamage(object sender, Damage.DamageEventArgs e)
@@ -27,7 +28,8 @@ namespace MichaelWolfGames.DamageSystem
             if (e.DamageType != Damage.DamageType.Bullet)
 	        {
 	            if(_isInvulnerable) return;
-	            StartCoroutine(CoInvulnerabilityDelay(_invulnTime));
+                if(_useInvuln)
+	                StartCoroutine(CoInvulnerabilityDelay(_invulnTime));
 	        }
 	        base.HandleDamage(sender, e);
 	    }

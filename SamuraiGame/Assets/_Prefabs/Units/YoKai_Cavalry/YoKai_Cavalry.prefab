@@ -1028,7 +1028,7 @@ MonoBehaviour:
     handleJointBreak: 0
     handleJointBreak2D: 0
     handleOnGUI: 0
-    handleFixedUpdate: 1
+    handleFixedUpdate: 0
     handleLateUpdate: 0
     handleApplicationEvents: 0
     handleLegacyNetworking: 0
@@ -1051,6 +1051,7 @@ MonoBehaviour:
   maxHealth: 150
   currentHealth: 150
   _debug: 0
+  _useInvuln: 0
   _invulnTime: 0.25
   _isInvulnerable: 0
 --- !u!114 &114227421226039732
@@ -1141,6 +1142,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   OwnerNumber: 1
+  Type: 3
 --- !u!114 &114587434211187376
 MonoBehaviour:
   m_ObjectHideFlags: 1

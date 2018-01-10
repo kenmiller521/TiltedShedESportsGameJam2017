@@ -1135,6 +1135,7 @@ MonoBehaviour:
   maxHealth: 75
   currentHealth: 75
   _debug: 0
+  _useInvuln: 0
   _invulnTime: 0.25
   _isInvulnerable: 0
 --- !u!114 &114703224417259034
@@ -1149,6 +1150,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   OwnerNumber: 1
+  Type: 2
 --- !u!212 &212319172094447272
 SpriteRenderer:
   m_ObjectHideFlags: 1
