@@ -11,12 +11,12 @@ public class GoldManager : MonoBehaviour
 {
     public int OwnerNumber = 0;
 
-    public int archerCost;
-    public int cavalryCost;
-    public int infantryCost;
+    public int infantryCost =100;
+    public int archerCost = 150;
+    public int cavalryCost = 200;
     public int passiveGoldIncrement;
     public float passiveGoldTimer;
-    public int balance; //referenced by UIButtonInteract
+    public int balance = 0; //referenced by UIButtonInteract
 
     private float _goldTimer;
 
@@ -27,13 +27,8 @@ public class GoldManager : MonoBehaviour
         ManagerInstances[OwnerNumber] = this;
     }
 
-    // Use this for initialization
     private void Start()
     {
-        balance = 0;
-        infantryCost = 100;
-        archerCost = 150;
-        cavalryCost = 200;
         _goldTimer = passiveGoldTimer;
     }
 

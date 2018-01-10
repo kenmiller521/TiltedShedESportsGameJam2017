@@ -421,6 +421,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _projectilePrefab: {fileID: 1219551973175742, guid: 637b80ab706528b48bdf041c838f4322,
     type: 2}
+  _spawnTransform: {fileID: 4788929804667740}
   _shootVector: {x: -1, y: 0.6}
   _shootForce: 8
 --- !u!114 &114456387343230802

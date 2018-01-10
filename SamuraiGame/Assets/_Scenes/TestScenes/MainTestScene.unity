@@ -225,6 +225,7 @@ GameObject:
   - component: {fileID: 182308572}
   - component: {fileID: 182308571}
   - component: {fileID: 182308570}
+  - component: {fileID: 182308576}
   m_Layer: 9
   m_Name: Tower_Enemy
   m_TagString: Untagged
@@ -245,7 +246,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SubscribableObject: {fileID: 0}
   _unit: {fileID: 0}
-  _goldValue: 50
+  _goldValue: 1000
 --- !u!114 &182308571
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -322,6 +323,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &182308576
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 182308569}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 060ee7c2cba442bf86ed77315cf27013, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SubscribableObject: {fileID: 0}
+  _delay: 1
+  _rootGameObject: {fileID: 0}
 --- !u!1 &187214553
 GameObject:
   m_ObjectHideFlags: 0
@@ -2724,6 +2739,9 @@ GameObject:
   - component: {fileID: 1578477198}
   - component: {fileID: 1578477197}
   - component: {fileID: 1578477196}
+  - component: {fileID: 1578477201}
+  - component: {fileID: 1578477200}
+  - component: {fileID: 1578477199}
   m_Layer: 8
   m_Name: Tower_Player
   m_TagString: Untagged
@@ -2795,6 +2813,46 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   OwnerNumber: 0
+--- !u!114 &1578477199
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1578477194}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 622f3a08d18dc3549891342c05bbdbaa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SubscribableObject: {fileID: 0}
+  _unit: {fileID: 0}
+  _goldValue: 1000
+--- !u!114 &1578477200
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1578477194}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c482306038dedb489299e2c337accdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SubscribableObject: {fileID: 0}
+--- !u!114 &1578477201
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1578477194}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 060ee7c2cba442bf86ed77315cf27013, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SubscribableObject: {fileID: 0}
+  _delay: 1
+  _rootGameObject: {fileID: 0}
 --- !u!1001 &1622853090
 Prefab:
   m_ObjectHideFlags: 0
